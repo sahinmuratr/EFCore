@@ -1,0 +1,25 @@
+﻿@using EFCore.Data.Entities
+@model List<Product>
+
+<html>
+    <head>
+
+    </head>
+
+
+    <body>
+        
+        <a href="/Home/AddProduct">Ürün Ekle</a>
+        <a href="/Home/UpdateProduct">Güncelle</a>
+        <a href="/Home/DeleteProduct">Sil</a>
+        <h2>Ürünler Listesi</h2>
+        @foreach (Product item in Model)
+    {
+        <p>@item.Id - @item.Name - @item.Price</p>
+    }
+
+    </body>
+
+
+
+</html>
